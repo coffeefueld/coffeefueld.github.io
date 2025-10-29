@@ -2,4 +2,13 @@ body {
   display: flex;
   justify-content: center;
   text-align: center;
+  background-color: #0c1821;
+}
+
+a {
+  color: #1b2a41;
+}
+
+h1 {
+  color: #ccc9dc;
 }
