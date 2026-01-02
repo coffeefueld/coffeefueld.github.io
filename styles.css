@@ -1,14 +1,17 @@
-body {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  background-color: #0c1821;
+#rubiks-menu {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  background: rgba(255,255,255,0.85);
+  padding: 6px;
+  border-radius:8px;
+  font-family: sans-serif;
+  margin-top: 235px;
 }
+#rubiks-menu button { margin: 2px 4px; padding: 6px 12px; border-radius: 5px; border: none; background: #6a95ff; color: white; font-weight: bold; cursor: pointer;}
+#rubiks-menu button:hover { background: #4562b5;}
 
-a {
-  color: #324a5f;
-}
-
-h1 {
-  color: #ccc9dc;
+#toolbarTip {
+  margin-top: 50px;
 }

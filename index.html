@@ -1,13 +1,59 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Projects</title>
-    <link rel="stylesheet" href="styles.css"> 
+    <meta charset="utf-8">
+    <title>Rubik's Cube Slice Rotation - Single Cubelet Version</title>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <link href="styles.css" rel="stylesheet">
   </head>
   <body>
-    <div id="mainDiv">
-    <h1>Links to Different projects</h1><br>
-      <a href="Graphics-Projects/index.html">Graphics Projects</a>
+    <div id="rubiks-menu">
+      <b>Rotate Slice:</b><br>
+      <button id="btn" onclick="rotateSlice('U')">U (Up)</button><br>
+      <button id="btn" onclick="rotateSlice('D')">D (Down)</button><br>
+      <button id="btn" onclick="rotateSlice('L')">L (Left)</button><br>
+      <button id="btn" onclick="rotateSlice('R')">R (Right)</button><br>
+      <button id="btn" onclick="rotateSlice('F')">F (Front)</button><br>
+      <button id="btn" onclick="rotateSlice('B')">B (Back)</button><br>
+      <button id="btn" onclick="rotateSlice('MH')">M (Middle Horizontal)</button><br>
+      <button id="btn" onclick="rotateSlice('MV')">M (Middle Vertical)</button><br>
+      <button id="btn" onclick="rotateSlice('MZ')">M (Middle Z Axis)</button><br>
+      <hr>
+      <button id="btn" onclick="rotateSlice('UR')">U' (Reverse Up)</button><br>
+      <button id="btn" onclick="rotateSlice('DR')">D' (Reverse Down)</button><br>
+      <button id="btn" onclick="rotateSlice('LR')">L' (Reverse Left)</button><br>
+      <button id="btn" onclick="rotateSlice('RR')">R' (Reverse Right)</button><br>
+      <button id="btn" onclick="rotateSlice('FR')">F' (Reverse Front)</button><br>
+      <button id="btn" onclick="rotateSlice('BR')">B' (Reverse Back)</button><br>
+      <button id="btn" onclick="rotateSlice('MHR')">M' (Reverse Middle Horizontal)</button><br>
+      <button id="btn" onclick="rotateSlice('MVR')">M' (Reverse Middle Vertical)</button><br>
+      <button id="btn" onclick="rotateSlice('MZR')">M' (Reverse Middle Z Axis)</button><br>
+      <b><i id="toolbarTip" style="font-size: 12pt; color: #595959;">Tip: Use Q and E to move up and down</i></b><br>
     </div>
+    <a-scene stats>
+      <a-assets>
+        <a-asset-item id="cube-model" src="rubiks_cube_standard_solid_v3.glb"></a-asset-item>
+        <a-asset-item id="writting" src="letters.glb"></a-asset-item>
+        <a-asset-item id="credit" src="credit.glb"></a-asset-item>
+        <img id="skyTexture" src="firewatch-background.jpg" crossorigin="anonymous"/>
+        <img id="groundTexture" src="2000px.png" crossorigin="anonymous"/>
+      </a-assets>
+      <a-sky src="#skyTexture"></a-sky>
+      <a-entity light="type: directional; intensity:10.2; color:#fff" position="1 4 2"></a-entity>
+      <a-entity light="type: ambient; intensity:5.35; color:#fff"></a-entity>
+      <a-entity light="type: point; intensity:10.6; distance:10" position="-4.5 2 -2"></a-entity>
+      <a-entity light="type: point; intensity:10.6; distance:10" position="4.5 2 -2"></a-entity>
+      <a-entity light="type: point; intensity:10.6; distance:10" position="0 2 -7"></a-entity>
+      <a-entity light="type: point; intensity:10; distance:10" scale="3 3 3" position="0 -0.2 -3"></a-entity>
+      <a-entity light="type: directional; intensity:5; distance:10" scale="3 3 3" position="-19.976 23.783 -36.852"></a-entity>
+      <a-entity id="cube-cluster"></a-entity>
+      <a-entity gltf-model="#writting" position="4 4.5 -3" scale="2 2 2"></a-entity>
+      <a-entity gltf-model="#credit" position="-33.78 0.1 -45.8" scale="2.1 2.1 2.1" rotation="-90 0 0"></a-entity>
+      <a-entity id="camera" camera="" position="0 2 3" wasd-controls="" rotation="" look-controls="" aframe-injected=""></a-entity>
+      <a-plane src="#groundTexture" rotation="-90 0 0" width="100" height="100" position="0 0 0" material="metalness: 0.8; roughness: 1"></a-plain>
+    </a-scene>
+
+    <script src="scripts.js"></script>
+    <script src="cMovement.js"></script>
   </body>
 </html>
