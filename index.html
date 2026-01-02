@@ -28,7 +28,9 @@
       <button id="btn" onclick="rotateSlice('MHR')">M' (Reverse Middle Horizontal)</button><br>
       <button id="btn" onclick="rotateSlice('MVR')">M' (Reverse Middle Vertical)</button><br>
       <button id="btn" onclick="rotateSlice('MZR')">M' (Reverse Middle Z Axis)</button><br>
-      <b><i id="toolbarTip" style="font-size: 12pt; color: #595959;">Tip: Use Q and E to move up and down</i></b><br>
+      <b><i id="toolbarTip" style="font-size: 12pt; color: #595959;">Tip: Use Q and E to move up and down</i><br>
+          <i id="toolbarTip" style="font-size: 12pt; color: #595959;">Press Shift to go faster</i>
+      </b><br>
     </div>
     <a-scene stats>
       <a-assets>
@@ -41,16 +43,25 @@
       </a-assets>
       <a-sky src="#skyTexture"></a-sky>
       <a-entity light="type: directional; intensity:10.2; color:#fff" position="1 4 2"></a-entity>
-      <a-entity light="type: ambient; intensity:5.35; color:#fff"></a-entity>
+      <a-entity light="type: ambient; intensity:0.8; color:#fdfbd3"></a-entity>
       <a-entity light="type: point; intensity:10.6; distance:10" position="-4.5 2 -2"></a-entity>
       <a-entity light="type: point; intensity:10.6; distance:10" position="4.5 2 -2"></a-entity>
       <a-entity light="type: point; intensity:10.6; distance:10" position="0 2 -7"></a-entity>
       <a-entity light="type: point; intensity:10; distance:10" scale="3 3 3" position="0 -0.2 -3"></a-entity>
       <a-entity light="type: directional; intensity:5; distance:10" scale="3 3 3" position="-19.976 23.783 -36.852"></a-entity>
       <a-entity id="cube-cluster"></a-entity>
+      
       <a-entity gltf-model="#writting" position="4 4.5 -3" scale="2 2 2"></a-entity>
-      <a-entity gltf-model="#credit" position="-33.78 0.1 -45.8" rotation="0 0 0"></a-entity>
-      <a-entity gltf-model="#tree" position="-1 1 1" scale="2.1 2.1 2.1" rotation="-90 0 0"></a-entity>
+      
+      <a-entity gltf-model="#credit" position="-33.78 0.1 -45.8" scale="2.1 2.1 2.1" rotation="-90 0 0"></a-entity>
+      
+      <a-entity gltf-model="#tree" position="17 1 15" rotation="0 0 0" scale="0.8 0.8 0.8"></a-entity>
+      <a-entity gltf-model="#tree" position="-13 1 -8" rotation="0 0 0" scale="0.8 0.8 0.8"></a-entity>
+      <a-entity gltf-model="#tree" position="4.05475 1 -22.92091" scale="0.8 0.8 0.8"></a-entity>
+      <a-entity gltf-model="#tree" position="24.20282 1 -3.01343" scale="0.8 0.8 0.8"></a-entity>
+      <a-entity gltf-model="#tree" position="-1 1 15" scale="0.8 0.8 0.8"></a-entity>
+      <a-entity gltf-model="#tree" position="-17 1 18" scale="0.8 0.8 0.8"></a-entity>
+
       <a-entity id="camera" camera="" position="0 2 3" wasd-controls="" rotation="" look-controls="" aframe-injected=""></a-entity>
       <a-plane src="#groundTexture" rotation="-90 0 0" width="100" height="100" position="0 0 0" material="metalness: 0.8; roughness: 1"></a-plain>
     </a-scene>
