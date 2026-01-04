@@ -1,27 +1,30 @@
 #rubiks-menu {
   position: absolute;
-  right: 0;
-  top: -23%;
+  right: 0.5%;
+  top: -24.5%;
   z-index: 10;
   background: rgba(74, 74, 74,0.95);
-  padding: 6px;
+  padding: 5px;
   border-radius:8px;
   font-family: sans-serif;
   margin-top: 13%;
   color: #ffffff;
+  font-size: 15pt;
 }
-#rubiks-menu button { margin: 2% 4%;
-  padding: 6px 12px;
+#rubiks-menu button { 
+  margin: 0.5% 4%;
+  padding: 4px 10px;
   border-radius: 5px;
   border: none;
   background: #5bc2cf;
   color: #ffffff;
   font-weight: bold;
   cursor: pointer;
+  font-size: 10pt;
 }
 #rubiks-menu button:hover { background: #438e98;}
 
 #toolbarTip {
-  font-size: 12pt; 
+  font-size: 11pt; 
   color: #c6c6c6;
 }
