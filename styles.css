@@ -1,17 +1,27 @@
 #rubiks-menu {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  right: 0;
+  top: -23%;
   z-index: 10;
-  background: rgba(255,255,255,0.85);
+  background: rgba(74, 74, 74,0.95);
   padding: 6px;
   border-radius:8px;
   font-family: sans-serif;
-  margin-top: 235px;
+  margin-top: 13%;
+  color: #ffffff;
 }
-#rubiks-menu button { margin: 2px 4px; padding: 6px 12px; border-radius: 5px; border: none; background: #6a95ff; color: white; font-weight: bold; cursor: pointer;}
-#rubiks-menu button:hover { background: #4562b5;}
+#rubiks-menu button { margin: 2% 4%;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: none;
+  background: #5bc2cf;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+}
+#rubiks-menu button:hover { background: #438e98;}
 
 #toolbarTip {
-  margin-top: 50px;
+  font-size: 12pt; 
+  color: #c6c6c6;
 }
